@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="../assets/css/grid-gallery.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <style>
+    body {
+      /* background-color: #0079ff3d; */
+      background: url(https://media.istockphoto.com/id/2110077150/photo/navy-blue-black-wave-pixelated-pattern-abstract-sea-luxury-background-ombre-dark-blue.webp?a=1&b=1&s=612x612&w=0&k=20&c=tIkKYucWEfguIa9UBybiLSZI2aT-6GpoQNI8tuK4rcE=);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    ul {
+      list-style-type: none;
+      
+   
+      overflow: hidden;
+      background-color: #8c0cc7;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: rgba(255, 255, 255, 0.852);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #ba95e1;
+    }
+  </style>
+</head>
+
+
+
+<body>
+
+  
+  <ul>
+    <li><a class="active" href="http://localhost:3000/auth/uploadpage"><i class="fa fa-fw fa-home"></i> Home</a></li>
+
+    <li style="float:right"><a class="active" href="http://localhost:3000/auth/uploadpage"><i class="fa fa-sign-in"></i>
+        Logout </a></li>
+    <li style="float:right"><a class="active" href="http://localhost:3000/auth/upload"><i class="fa fa-sign-in"></i>
+        Upload </a></li>
+
+  </ul>
+
+  <h1> </h1>
+
+  <h1> </h1>
+  <!-- <% for(let count=0; count < data.length ; count++ ){ %>
+    <img src='<%= data[count] %>' height="300" width="450" />
+    <%# will output the numbers 1-100 %>
+      <% } %> -->
+      <div class="gg-container">
+        <div class="gg-box" id="heightWidth">
+          <% for(let count=0; count < data.length ; count++ ){ %>
+    <img src='<%= data[count] %>' />
+    <%# will output the numbers 1-100 %>
+      <% } %>
+         
+        </div>
+        </div>
+        <script src="../assets/js/grid-gallery.min.js"></script>
+        <script>
+          gridGallery({
+      selector: "#heightWidth",
+      gaplength: 10,
+      rowHeight:350,
+      columnWidth: 280
+    });
+        </script>
+</body>
+</head>

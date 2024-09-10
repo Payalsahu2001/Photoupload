@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: url('https://media.istockphoto.com/id/1645455800/photo/empty-dark-black-room-background-black-gradient-texture-for-display-your-product.webp?a=1&b=1&s=612x612&w=0&k=20&c=Hnr7hEI0OOJxzHVOCUZFDR74ApZEbNsbYS1ktQpXOxQ=') no-repeat center center fixed; /* Replace with your image path */
+            background-size: cover; /* Ensures the image covers the whole page */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .btn-success {
+            background-color: #760cb8; /* Green background */
+            color: white; /* White text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-success:hover {
+            background-color: #bc7bda; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form action="/auth/doFileUpload" method="post" enctype="multipart/form-data">
+            <input type="file" name="mypic" id="pic">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

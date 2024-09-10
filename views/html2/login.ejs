@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/grid-gallery.min.css">
+    <%- include('impCdn') %>
+</head>
+
+<body>
+    <style>
+         body {
+           
+  background: url(https://media.istockphoto.com/id/1332490952/photo/a-beautiful-dark-purple-background-image.webp?a=1&b=1&s=612x612&w=0&k=20&c=XDDQoF2REzTyDQlp-P6_OX9xnG1Gz4rn5JIDtM6cPM4=);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    .container{
+        top: 50%;
+        left: 50%;
+        width: 30em;
+        height: 18em;
+        margin-top: -15em;
+        margin-left: -15em;
+        border: 1px solid #12d5ea;
+        background-color: rgba(171, 124, 245, 0.763);
+        position: fixed;
+
+    }
+  
+    .custom-btn {
+        background-color: #630280; 
+        color: white; 
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px; 
+        font-size: 16px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+    }
+
+    .custom-btn:hover {
+        background-color: #8306f0; 
+    }
+
+    </style>
+   <%- include('header') %>
+        <div class="container">
+            <div class="row">
+                <div class="col-10 m-auto">
+                    <form action="/auth/dosignIn" method="post">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="email">
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                        </div>
+                       
+                        <button type="submit" class="btn custom-btn">Submit</button>
+                        <% if (errmessage) { %>
+                            <h2 style="color: red;">
+                                <%= errmessage %>
+                            </h2>
+                            <% } %>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
